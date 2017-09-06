@@ -22,8 +22,9 @@ class User
 
   def learn_routine(file)
     File.open(file).each do |line|
-      @jokes <<
+        @jokes << line
     end
+    @jokes.shift
   end
 
 end
