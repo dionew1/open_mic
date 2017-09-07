@@ -21,10 +21,10 @@ class User
   end
 
   def learn_routine(file)
-    File.open(file).each do |line|
+    File.open(file).each_with_index do |line, index|
+        next if index == 0
         @jokes << line
     end
-    @jokes.shift
   end
 
 end
