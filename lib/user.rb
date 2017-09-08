@@ -16,7 +16,7 @@ class User
 
   def perform_routine_for(user)
     @jokes.map do |joke|
-      user.jokes << joke
+      tell(user, joke)
     end
   end
 
